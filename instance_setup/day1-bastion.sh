@@ -48,6 +48,9 @@ curl -LO https://github.com/argoproj/argo-rollouts/releases/latest/download/kube
 chmod +x ./kubectl-argo-rollouts-linux-amd64
 sudo mv ./kubectl-argo-rollouts-linux-amd64 /usr/local/bin/kubectl-argo-rollouts
 
+echo "Installing Helm..."
+sudo dnf install -y helm
+
 echo "Verifying installations..."
 echo "Docker version:"
 docker --version
@@ -61,3 +64,5 @@ echo "EKSCTL version:"
 eksctl version
 echo "Argo Rollouts plugin version:"
 kubectl argo rollouts version
+echo "Helm version:"
+helm version

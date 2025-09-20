@@ -19,3 +19,5 @@ PS Instance는 용량 부족을 대비하여 볼륨 크기를 50GB로 설정할 
 - Kubectl
 - eksctl
 - Terraform
+- helm
+- Github CLI

@@ -55,6 +55,9 @@ curl -LO https://github.com/argoproj/argo-rollouts/releases/latest/download/kube
 chmod +x ./kubectl-argo-rollouts-linux-amd64
 sudo mv ./kubectl-argo-rollouts-linux-amd64 /usr/local/bin/kubectl-argo-rollouts
 
+echo "Installing Helm..."
+sudo dnf install -y helm
+
 echo "Installing Terraform..."
 sudo dnf install -y dnf-plugins-core
 sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
@@ -75,6 +78,8 @@ echo "EKSCTL version:"
 eksctl version
 echo "Argo Rollouts plugin version:"
 kubectl argo rollouts version
+echo "Helm version:"
+helm version
 echo "Terraform version:"
 terraform --version
 echo "Curl version:"

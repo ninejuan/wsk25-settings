@@ -37,6 +37,9 @@ sudo dnf install -y dnf5-plugins
 sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install -y gh --repo gh-cli
 
+echo "Installing Helm..."
+sudo dnf install -y helm
+
 echo "Verifying installations..."
 echo "Docker version:"
 docker --version
@@ -48,6 +51,8 @@ echo "ArgoCD CLI version:"
 argocd version --client
 echo "GitHub CLI version:"
 gh --version
+echo "Helm version:"
+helm version
 echo "Curl version:"
 curl --version
 echo "Nano version:"
