@@ -40,6 +40,9 @@ sudo dnf install -y gh --repo gh-cli
 echo "Installing Helm..."
 sudo dnf install -y helm
 
+echo "Installing MariaDB 10.5..."
+sudo dnf install -y mariadb105
+
 echo "Verifying installations..."
 echo "Docker version:"
 docker --version
@@ -53,6 +56,8 @@ echo "GitHub CLI version:"
 gh --version
 echo "Helm version:"
 helm version
+echo "MariaDB version:"
+mysql --version
 echo "Curl version:"
 curl --version
 echo "Nano version:"

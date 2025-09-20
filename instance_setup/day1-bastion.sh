@@ -51,6 +51,9 @@ sudo mv ./kubectl-argo-rollouts-linux-amd64 /usr/local/bin/kubectl-argo-rollouts
 echo "Installing Helm..."
 sudo dnf install -y helm
 
+echo "Installing MariaDB 10.5..."
+sudo dnf install -y mariadb105
+
 echo "Verifying installations..."
 echo "Docker version:"
 docker --version
@@ -66,3 +69,5 @@ echo "Argo Rollouts plugin version:"
 kubectl argo rollouts version
 echo "Helm version:"
 helm version
+echo "MariaDB version:"
+mysql --version

@@ -40,6 +40,9 @@ echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.co
 sudo apt-get update
 sudo apt-get install helm
 
+echo "Installing MariaDB 10.5..."
+sudo apt install -y mariadb-client
+
 echo "Verifying installations..."
 echo "Docker version:"
 docker --version
@@ -49,6 +52,8 @@ echo "Kubectl version:"
 kubectl version --client
 echo "Helm version:"
 helm version
+echo "MariaDB version:"
+mysql --version
 echo "Curl version:"
 curl --version
 echo "Nano version:"
