@@ -50,7 +50,9 @@ chmod +x ./kubectl-argo-rollouts-linux-amd64
 sudo mv ./kubectl-argo-rollouts-linux-amd64 /usr/local/bin/kubectl-argo-rollouts
 
 echo "Installing Helm..."
-sudo dnf install -y helm
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
 
 echo "Installing MariaDB 10.5..."
 sudo dnf install -y mariadb105
