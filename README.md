@@ -6,6 +6,7 @@
 day1, day2, day3 Terraform 프로젝트가 각 레포지토리에 업로드되어 있습니다.  
 Default VPC에 t3.micro 등 작은 bastion host를 생성한 후, 해당 Project를 Clone 받아 사용합니다.  
 단, Clone 받은 프로젝트를 Apply하기 전, instance_setup/ps_instance.sh 파일을 실행합니다.  
+PS Instance는 용량 부족을 대비하여 볼륨 크기를 50GB로 설정할 것을 권장합니다.  
 
 ## 포함한 파일들
 ### bash_profile
